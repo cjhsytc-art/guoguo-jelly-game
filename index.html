@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Champ's Big Adventure</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="game" width="960" height="540" aria-label="小男孩足球横板小游戏"></canvas>
+
+      <div class="video-overlay" id="victoryOverlay" aria-hidden="true">
+        <div class="video-panel">
+          <video id="victoryVideo" src="assets/victory-video.mp4" playsinline controls preload="auto"></video>
+          <button id="replayButton" type="button">再玩一次</button>
+        </div>
+      </div>
+
+      <div class="mobile-controls" aria-label="手机操作按钮">
+        <div class="pad">
+          <button data-hold="left" aria-label="向左">‹</button>
+          <button data-hold="right" aria-label="向右">›</button>
+        </div>
+        <div class="actions">
+          <button data-press="jump" aria-label="跳跃">跳</button>
+          <button data-press="kick" aria-label="踢球">踢</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
